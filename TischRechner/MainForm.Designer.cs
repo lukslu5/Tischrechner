@@ -715,7 +715,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Snow;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = global::TischRechner.Properties.Resources.HKUwU;
             this.pictureBox1.InitialImage = null;
