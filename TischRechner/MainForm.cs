@@ -167,6 +167,7 @@ namespace TischRechner
 
             btn_save.Enabled = true;
             btn_copy.Enabled = true;
+            btn_round.Enabled = true;
         }
         private void btn_Save_Click(object sender, EventArgs e)
         {
@@ -214,6 +215,15 @@ namespace TischRechner
         private void CalcWindow_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_round_Click(object sender, EventArgs e)
+        {
+            double number = Calcs[Calcs.Count - 2].solution;
+            double rounded = Math.Round(number , 2);
+
+            Calcs[Calcs.Count - 2].solution = rounded;
+            CalcWindow.Text = rounded.ToString();
         }
     }
 }

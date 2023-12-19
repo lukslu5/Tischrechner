@@ -763,6 +763,7 @@
             // btn_round
             // 
             this.btn_round.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(207)))), ((int)(((byte)(219)))));
+            this.btn_round.Enabled = false;
             this.btn_round.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_round.FlatAppearance.BorderSize = 2;
             this.btn_round.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
@@ -779,6 +780,7 @@
             this.btn_round.TabIndex = 28;
             this.btn_round.Text = "↕";
             this.btn_round.UseVisualStyleBackColor = true;
+            this.btn_round.Click += new System.EventHandler(this.btn_round_Click);
             // 
             // pictureBox1
             // 
