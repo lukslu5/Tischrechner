@@ -222,7 +222,7 @@ namespace TischRechner
         private void btn_round_Click(object sender, EventArgs e)
         {
             double number = Calcs[Calcs.Count - 2].solution;
-            double rounded = Math.Round(number , 2);
+            double rounded = Math.Round(number , 2, MidpointRounding.AwayFromZero); //1,045 -> 1,5
 
             Calcs[Calcs.Count - 2].solution = rounded;
             CalcWindow.Text = rounded.ToString();
