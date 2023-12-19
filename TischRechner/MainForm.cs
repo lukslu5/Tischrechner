@@ -219,22 +219,26 @@ namespace TischRechner
 
         }
 
+        private void UpdateRound(double updatedNumber)
+        {
+            Calcs[Calcs.Count - 2].solution = updatedNumber;
+            CalcWindow.Text = updatedNumber.ToString();
+        }
+
         private void btn_round_Click(object sender, EventArgs e)
         {
             double number = Calcs[Calcs.Count - 2].solution;
             double rounded = Math.Round(number , 2, MidpointRounding.AwayFromZero); //1,045 -> 1,5
 
-            Calcs[Calcs.Count - 2].solution = rounded;
-            CalcWindow.Text = rounded.ToString();
+            UpdateRound(rounded);
         }
 
         private void btn_cutoff_Click(object sender, EventArgs e)
         {
             double number = Calcs[Calcs.Count - 2].solution;
-            double cutted = Math.Truncate(100 * number) / 100; //1,598 -> 159,8 -> 159 -> 1,59
+            double cutted = Math.Truncate(100 * number) / 100; //1,045 -> 104,5 -> 104 -> 1,04
 
-            Calcs[Calcs.Count - 2].solution = cutted;
-            CalcWindow.Text = cutted.ToString();
+            UpdateRound(cutted);
         }
 
         private void btn_roundCommercial_Click(object sender, EventArgs e)
@@ -242,8 +246,7 @@ namespace TischRechner
             double number = Calcs[Calcs.Count - 2].solution;
             double commerical = Math.Round(number, 2); // 1,045 -> 1,04
 
-            Calcs[Calcs.Count - 2].solution = commerical;
-            CalcWindow.Text = commerical.ToString();
+            UpdateRound(commerical);
         }
     }
 }
