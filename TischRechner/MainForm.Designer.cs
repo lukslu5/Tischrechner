@@ -723,6 +723,7 @@
             // btn_cutoff
             // 
             this.btn_cutoff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(207)))), ((int)(((byte)(219)))));
+            this.btn_cutoff.Enabled = false;
             this.btn_cutoff.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_cutoff.FlatAppearance.BorderSize = 2;
             this.btn_cutoff.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
@@ -739,6 +740,7 @@
             this.btn_cutoff.TabIndex = 31;
             this.btn_cutoff.Text = "✂";
             this.btn_cutoff.UseVisualStyleBackColor = true;
+            this.btn_cutoff.Click += new System.EventHandler(this.btn_cutoff_Click);
             // 
             // btn_RoundCOMMERCIAL
             // 
