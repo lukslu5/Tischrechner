@@ -169,6 +169,7 @@ namespace TischRechner
             btn_copy.Enabled = true;
             btn_round.Enabled = true;
             btn_cutoff.Enabled = true;
+            btn_roundCommercial.Enabled = true;
         }
         private void btn_Save_Click(object sender, EventArgs e)
         {
@@ -234,6 +235,15 @@ namespace TischRechner
 
             Calcs[Calcs.Count - 2].solution = cutted;
             CalcWindow.Text = cutted.ToString();
+        }
+
+        private void btn_roundCommercial_Click(object sender, EventArgs e)
+        {
+            double number = Calcs[Calcs.Count - 2].solution;
+            double commerical = Math.Round(number, 2); // 1,045 -> 1,04
+
+            Calcs[Calcs.Count - 2].solution = commerical;
+            CalcWindow.Text = commerical.ToString();
         }
     }
 }
