@@ -57,8 +57,8 @@
             this.Panel_UI2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanelGUI = new System.Windows.Forms.TableLayoutPanel();
             this.CalcSavedLabel = new System.Windows.Forms.Label();
-            this.tableLayoutPanelCONTROL = new System.Windows.Forms.TableLayoutPanel();
             this.CalcSaved = new System.Windows.Forms.Label();
+            this.tableLayoutPanelCONTROL = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel_UI2.SuspendLayout();
             this.tableLayoutPanelGUI.SuspendLayout();
@@ -649,6 +649,20 @@
             this.CalcSavedLabel.Text = "Zwischenablage:";
             this.CalcSavedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // CalcSaved
+            // 
+            this.CalcSaved.AutoEllipsis = true;
+            this.CalcSaved.BackColor = System.Drawing.Color.Transparent;
+            this.CalcSaved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CalcSaved.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalcSaved.ForeColor = System.Drawing.Color.Snow;
+            this.CalcSaved.Location = new System.Drawing.Point(109, 38);
+            this.CalcSaved.Margin = new System.Windows.Forms.Padding(1);
+            this.CalcSaved.Name = "CalcSaved";
+            this.CalcSaved.Size = new System.Drawing.Size(158, 14);
+            this.CalcSaved.TabIndex = 2;
+            this.CalcSaved.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // tableLayoutPanelCONTROL
             // 
             this.tableLayoutPanelCONTROL.AutoSize = true;
@@ -698,20 +712,6 @@
             this.tableLayoutPanelCONTROL.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanelCONTROL.Size = new System.Drawing.Size(324, 324);
             this.tableLayoutPanelCONTROL.TabIndex = 5;
-            // 
-            // CalcSaved
-            // 
-            this.CalcSaved.AutoEllipsis = true;
-            this.CalcSaved.BackColor = System.Drawing.Color.Transparent;
-            this.CalcSaved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CalcSaved.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CalcSaved.ForeColor = System.Drawing.Color.Snow;
-            this.CalcSaved.Location = new System.Drawing.Point(109, 38);
-            this.CalcSaved.Margin = new System.Windows.Forms.Padding(1);
-            this.CalcSaved.Name = "CalcSaved";
-            this.CalcSaved.Size = new System.Drawing.Size(158, 14);
-            this.CalcSaved.TabIndex = 2;
-            this.CalcSaved.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox1
             // 
