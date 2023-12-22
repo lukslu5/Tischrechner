@@ -59,7 +59,7 @@
             this.CalcSavedLabel = new System.Windows.Forms.Label();
             this.CalcSaved = new System.Windows.Forms.Label();
             this.tableLayoutPanelCONTROL = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_MwST_7 = new System.Windows.Forms.Button();
+            this.btn_MwSt_7 = new System.Windows.Forms.Button();
             this.btn_MwSt_19 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel_UI2.SuspendLayout();
@@ -702,7 +702,7 @@
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_9, 3, 2);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_plus, 4, 2);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_minus, 4, 3);
-            this.tableLayoutPanelCONTROL.Controls.Add(this.btn_MwST_7, 5, 0);
+            this.tableLayoutPanelCONTROL.Controls.Add(this.btn_MwSt_7, 5, 0);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_MwSt_19, 5, 3);
             this.tableLayoutPanelCONTROL.Location = new System.Drawing.Point(4, 55);
             this.tableLayoutPanelCONTROL.Margin = new System.Windows.Forms.Padding(2);
@@ -718,29 +718,32 @@
             this.tableLayoutPanelCONTROL.Size = new System.Drawing.Size(324, 324);
             this.tableLayoutPanelCONTROL.TabIndex = 5;
             // 
-            // btn_MwST_7
+            // btn_MwSt_7
             // 
-            this.btn_MwST_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(207)))), ((int)(((byte)(219)))));
-            this.btn_MwST_7.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_MwST_7.FlatAppearance.BorderSize = 2;
-            this.btn_MwST_7.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btn_MwST_7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(106)))), ((int)(((byte)(136)))));
-            this.btn_MwST_7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(129)))), ((int)(((byte)(156)))));
-            this.btn_MwST_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_MwST_7.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_MwST_7.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.btn_MwST_7.Location = new System.Drawing.Point(272, 2);
-            this.btn_MwST_7.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_MwST_7.Name = "btn_MwST_7";
-            this.tableLayoutPanelCONTROL.SetRowSpan(this.btn_MwST_7, 3);
-            this.btn_MwST_7.Size = new System.Drawing.Size(50, 158);
-            this.btn_MwST_7.TabIndex = 28;
-            this.btn_MwST_7.Text = "7%";
-            this.btn_MwST_7.UseVisualStyleBackColor = true;
+            this.btn_MwSt_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(207)))), ((int)(((byte)(219)))));
+            this.btn_MwSt_7.Enabled = false;
+            this.btn_MwSt_7.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_MwSt_7.FlatAppearance.BorderSize = 2;
+            this.btn_MwSt_7.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btn_MwSt_7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(106)))), ((int)(((byte)(136)))));
+            this.btn_MwSt_7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(129)))), ((int)(((byte)(156)))));
+            this.btn_MwSt_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_MwSt_7.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_MwSt_7.ForeColor = System.Drawing.Color.MediumVioletRed;
+            this.btn_MwSt_7.Location = new System.Drawing.Point(272, 2);
+            this.btn_MwSt_7.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_MwSt_7.Name = "btn_MwSt_7";
+            this.tableLayoutPanelCONTROL.SetRowSpan(this.btn_MwSt_7, 3);
+            this.btn_MwSt_7.Size = new System.Drawing.Size(50, 158);
+            this.btn_MwSt_7.TabIndex = 28;
+            this.btn_MwSt_7.Text = "7%";
+            this.btn_MwSt_7.UseVisualStyleBackColor = true;
+            this.btn_MwSt_7.Click += new System.EventHandler(this.btn_MwST_Click);
             // 
             // btn_MwSt_19
             // 
             this.btn_MwSt_19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(207)))), ((int)(((byte)(219)))));
+            this.btn_MwSt_19.Enabled = false;
             this.btn_MwSt_19.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_MwSt_19.FlatAppearance.BorderSize = 2;
             this.btn_MwSt_19.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
@@ -757,6 +760,7 @@
             this.btn_MwSt_19.TabIndex = 29;
             this.btn_MwSt_19.Text = "19%";
             this.btn_MwSt_19.UseVisualStyleBackColor = true;
+            this.btn_MwSt_19.Click += new System.EventHandler(this.btn_MwST_Click);
             // 
             // pictureBox1
             // 
@@ -830,7 +834,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelCONTROL;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelGUI;
-        private System.Windows.Forms.Button btn_MwST_7;
+        private System.Windows.Forms.Button btn_MwSt_7;
         private System.Windows.Forms.Button btn_MwSt_19;
     }
 }
