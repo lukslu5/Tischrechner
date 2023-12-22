@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Net;
 using System.Windows.Forms;
 
 namespace TischRechner
@@ -22,6 +24,36 @@ namespace TischRechner
         {
             InitializeComponent();
             Calcs.Add(new Calc());
+
+            List<string> currencyCodes = new List<string>
+            {
+            "AED", "AFN", "ALL", "AMD", "ANG", "AOA", "ARS", "AUD", "AWG", "AZN",
+            "BAM", "BBD", "BDT", "BGN", "BHD", "BIF", "BMD", "BND", "BOB", "BRL",
+            "BSD", "BTN", "BWP", "BYN", "BZD", "CAD", "CDF", "CHF", "CLP", "CNY",
+            "COP", "CRC", "CUP", "CVE", "CZK", "DJF", "DKK", "DOP", "DZD", "EGP",
+            "ERN", "ETB", "EUR", "FJD", "FKP", "FOK", "GBP", "GEL", "GGP", "GHS",
+            "GIP", "GMD", "GNF", "GTQ", "GYD", "HKD", "HNL", "HRK", "HTG", "HUF",
+            "IDR", "ILS", "IMP", "INR", "IQD", "IRR", "ISK", "JEP", "JMD", "JOD",
+            "JPY", "KES", "KGS", "KHR", "KID", "KMF", "KRW", "KWD", "KYD", "KZT",
+            "LAK", "LBP", "LKR", "LRD", "LSL", "LYD", "MAD", "MDL", "MGA", "MKD",
+            "MMK", "MNT", "MOP", "MRU", "MUR", "MVR", "MWK", "MXN", "MYR", "MZN",
+            "NAD", "NGN", "NIO", "NOK", "NPR", "NZD", "OMR", "PAB", "PEN", "PGK",
+            "PHP", "PKR", "PLN", "PYG", "QAR", "RON", "RSD", "RUB", "RWF", "SAR",
+            "SBD", "SCR", "SDG", "SEK", "SGD", "SHP", "SLE", "SOS", "SRD", "SSP",
+            "STN", "SYP", "SZL", "THB", "TJS", "TMT", "TND", "TOP", "TRY", "TTD",
+            "TVD", "TWD", "TZS", "UAH", "UGX", "USD", "UYU", "UZS", "VES", "VND",
+            "VUV", "WST", "XAF", "XCD", "XDR", "XOF", "XPF", "YER", "ZAR", "ZMW",
+            "ZWL"
+            };
+
+            foreach (string code in currencyCodes)
+            {
+                ListBox_CC_From.Items.Add(code);
+                ListBox_CC_To.Items.Add(code);
+            }
+
+            ListBox_CC_From.SelectedItem = "EUR";
+            ListBox_CC_To.SelectedItem = "GBP";
         }
         private void UpdateCalc(string op)
         {
@@ -167,6 +199,7 @@ namespace TischRechner
 
             btn_save.Enabled = true;
             btn_copy.Enabled = true;
+            btn_CC_Convert.Enabled = true;
         }
         private void btn_Save_Click(object sender, EventArgs e)
         {
@@ -214,6 +247,33 @@ namespace TischRechner
         private void CalcWindow_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void UpdateRound(double updatedNumber)
+        {
+            Calcs[Calcs.Count - 2].solution = updatedNumber;
+            CalcWindow.Text = updatedNumber.ToString();
+        }
+
+        private void btn_CC_Convert_Click(object sender, EventArgs e)
+        {
+            string apiKey = "80f9b45c29ba5394ea3e6603";
+            string fromCurrency = ListBox_CC_From.SelectedItem.ToString();
+            string toCurrency = ListBox_CC_To.SelectedItem.ToString();
+
+            HttpClient request = new HttpClient();
+            HttpResponseMessage response = request.GetAsync($"https://v6.exchangerate-api.com/v6/{apiKey}/pair/{fromCurrency}/{toCurrency}").Result;
+            request.Dispose();
+
+            string result = response.Content.ReadAsStringAsync().Result;
+
+            result = result.Replace("\"", string.Empty).Replace("{", string.Empty).Replace("}", string.Empty);
+            string[] results = result.Split(',');
+
+            double converionRate = Convert.ToDouble(results[results.Length - 1].Split(':')[1]) / 10000;
+            double number = Calcs[Calcs.Count - 2].solution;
+            double numberConversion = number * converionRate;
+            UpdateRound(numberConversion);
         }
     }
 }
