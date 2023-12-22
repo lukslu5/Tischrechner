@@ -59,11 +59,20 @@
             this.CalcSavedLabel = new System.Windows.Forms.Label();
             this.CalcSaved = new System.Windows.Forms.Label();
             this.tableLayoutPanelCONTROL = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_CC_Convert = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel_CC_From = new System.Windows.Forms.TableLayoutPanel();
+            this.ListBox_CC_From = new System.Windows.Forms.ListBox();
+            this.Label_CC_From = new System.Windows.Forms.Label();
+            this.tableLayoutPanel_CC_To = new System.Windows.Forms.TableLayoutPanel();
+            this.ListBox_CC_To = new System.Windows.Forms.ListBox();
+            this.Label_CC_To = new System.Windows.Forms.Label();
             this.Panel_UI2.SuspendLayout();
             this.tableLayoutPanelGUI.SuspendLayout();
             this.tableLayoutPanelCONTROL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel_CC_From.SuspendLayout();
+            this.tableLayoutPanel_CC_To.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_0
@@ -630,7 +639,7 @@
             this.tableLayoutPanelGUI.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanelGUI.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelGUI.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelGUI.Size = new System.Drawing.Size(332, 383);
+            this.tableLayoutPanelGUI.Size = new System.Drawing.Size(332, 403);
             this.tableLayoutPanelGUI.TabIndex = 6;
             // 
             // CalcSavedLabel
@@ -675,6 +684,7 @@
             this.tableLayoutPanelCONTROL.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanelCONTROL.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanelCONTROL.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanelCONTROL.Controls.Add(this.tableLayoutPanel_CC_To, 5, 4);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_equals, 4, 4);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_C, 0, 4);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_CE, 0, 2);
@@ -700,18 +710,42 @@
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_9, 3, 2);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_plus, 4, 2);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_minus, 4, 3);
+            this.tableLayoutPanelCONTROL.Controls.Add(this.btn_CC_Convert, 5, 2);
+            this.tableLayoutPanelCONTROL.Controls.Add(this.tableLayoutPanel_CC_From, 5, 0);
             this.tableLayoutPanelCONTROL.Location = new System.Drawing.Point(4, 55);
             this.tableLayoutPanelCONTROL.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelCONTROL.Name = "tableLayoutPanelCONTROL";
-            this.tableLayoutPanelCONTROL.RowCount = 6;
+            this.tableLayoutPanelCONTROL.RowCount = 7;
             this.tableLayoutPanelCONTROL.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanelCONTROL.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanelCONTROL.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanelCONTROL.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanelCONTROL.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanelCONTROL.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanelCONTROL.Size = new System.Drawing.Size(324, 324);
+            this.tableLayoutPanelCONTROL.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelCONTROL.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelCONTROL.Size = new System.Drawing.Size(324, 344);
             this.tableLayoutPanelCONTROL.TabIndex = 5;
+            // 
+            // btn_CC_Convert
+            // 
+            this.btn_CC_Convert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(207)))), ((int)(((byte)(219)))));
+            this.btn_CC_Convert.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_CC_Convert.FlatAppearance.BorderSize = 2;
+            this.btn_CC_Convert.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btn_CC_Convert.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(106)))), ((int)(((byte)(136)))));
+            this.btn_CC_Convert.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(129)))), ((int)(((byte)(156)))));
+            this.btn_CC_Convert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CC_Convert.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CC_Convert.ForeColor = System.Drawing.Color.MediumVioletRed;
+            this.btn_CC_Convert.Location = new System.Drawing.Point(272, 110);
+            this.btn_CC_Convert.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_CC_Convert.Name = "btn_CC_Convert";
+            this.tableLayoutPanelCONTROL.SetRowSpan(this.btn_CC_Convert, 2);
+            this.btn_CC_Convert.Size = new System.Drawing.Size(50, 104);
+            this.btn_CC_Convert.TabIndex = 29;
+            this.btn_CC_Convert.Text = "↪\r\n↩";
+            this.btn_CC_Convert.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -725,6 +759,100 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            // 
+            // tableLayoutPanel_CC_From
+            // 
+            this.tableLayoutPanel_CC_From.ColumnCount = 1;
+            this.tableLayoutPanel_CC_From.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel_CC_From.Controls.Add(this.ListBox_CC_From, 0, 1);
+            this.tableLayoutPanel_CC_From.Controls.Add(this.Label_CC_From, 0, 0);
+            this.tableLayoutPanel_CC_From.Location = new System.Drawing.Point(270, 0);
+            this.tableLayoutPanel_CC_From.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel_CC_From.Name = "tableLayoutPanel_CC_From";
+            this.tableLayoutPanel_CC_From.RowCount = 2;
+            this.tableLayoutPanelCONTROL.SetRowSpan(this.tableLayoutPanel_CC_From, 2);
+            this.tableLayoutPanel_CC_From.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.70803F));
+            this.tableLayoutPanel_CC_From.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.29197F));
+            this.tableLayoutPanel_CC_From.Size = new System.Drawing.Size(54, 108);
+            this.tableLayoutPanel_CC_From.TabIndex = 31;
+            // 
+            // ListBox_CC_From
+            // 
+            this.ListBox_CC_From.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListBox_CC_From.FormattingEnabled = true;
+            this.ListBox_CC_From.IntegralHeight = false;
+            this.ListBox_CC_From.Items.AddRange(new object[] {
+            "EUR",
+            "USD",
+            "GBP",
+            "RMB",
+            "CHF"});
+            this.ListBox_CC_From.Location = new System.Drawing.Point(2, 23);
+            this.ListBox_CC_From.Margin = new System.Windows.Forms.Padding(2);
+            this.ListBox_CC_From.Name = "ListBox_CC_From";
+            this.ListBox_CC_From.ScrollAlwaysVisible = true;
+            this.ListBox_CC_From.Size = new System.Drawing.Size(50, 83);
+            this.ListBox_CC_From.TabIndex = 32;
+            // 
+            // Label_CC_From
+            // 
+            this.Label_CC_From.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Label_CC_From.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Label_CC_From.Font = new System.Drawing.Font("Lucida Sans Typewriter", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_CC_From.ForeColor = System.Drawing.Color.Snow;
+            this.Label_CC_From.Location = new System.Drawing.Point(2, 2);
+            this.Label_CC_From.Margin = new System.Windows.Forms.Padding(2, 2, 4, 0);
+            this.Label_CC_From.Name = "Label_CC_From";
+            this.Label_CC_From.Size = new System.Drawing.Size(50, 19);
+            this.Label_CC_From.TabIndex = 33;
+            this.Label_CC_From.Text = "From:";
+            // 
+            // tableLayoutPanel_CC_To
+            // 
+            this.tableLayoutPanel_CC_To.ColumnCount = 1;
+            this.tableLayoutPanel_CC_To.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel_CC_To.Controls.Add(this.ListBox_CC_To, 0, 1);
+            this.tableLayoutPanel_CC_To.Controls.Add(this.Label_CC_To, 0, 0);
+            this.tableLayoutPanel_CC_To.Location = new System.Drawing.Point(270, 216);
+            this.tableLayoutPanel_CC_To.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel_CC_To.Name = "tableLayoutPanel_CC_To";
+            this.tableLayoutPanel_CC_To.RowCount = 2;
+            this.tableLayoutPanelCONTROL.SetRowSpan(this.tableLayoutPanel_CC_To, 2);
+            this.tableLayoutPanel_CC_To.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.70803F));
+            this.tableLayoutPanel_CC_To.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.29197F));
+            this.tableLayoutPanel_CC_To.Size = new System.Drawing.Size(54, 108);
+            this.tableLayoutPanel_CC_To.TabIndex = 34;
+            // 
+            // ListBox_CC_To
+            // 
+            this.ListBox_CC_To.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListBox_CC_To.FormattingEnabled = true;
+            this.ListBox_CC_To.IntegralHeight = false;
+            this.ListBox_CC_To.Items.AddRange(new object[] {
+            "EUR",
+            "USD",
+            "GBP",
+            "RMB",
+            "CHF"});
+            this.ListBox_CC_To.Location = new System.Drawing.Point(2, 23);
+            this.ListBox_CC_To.Margin = new System.Windows.Forms.Padding(2);
+            this.ListBox_CC_To.Name = "ListBox_CC_To";
+            this.ListBox_CC_To.ScrollAlwaysVisible = true;
+            this.ListBox_CC_To.Size = new System.Drawing.Size(50, 83);
+            this.ListBox_CC_To.TabIndex = 32;
+            // 
+            // Label_CC_To
+            // 
+            this.Label_CC_To.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Label_CC_To.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Label_CC_To.Font = new System.Drawing.Font("Lucida Sans Typewriter", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_CC_To.ForeColor = System.Drawing.Color.Snow;
+            this.Label_CC_To.Location = new System.Drawing.Point(2, 2);
+            this.Label_CC_To.Margin = new System.Windows.Forms.Padding(2, 2, 4, 0);
+            this.Label_CC_To.Name = "Label_CC_To";
+            this.Label_CC_To.Size = new System.Drawing.Size(48, 19);
+            this.Label_CC_To.TabIndex = 33;
+            this.Label_CC_To.Text = "To:";
             // 
             // MainForm
             // 
@@ -746,6 +874,8 @@
             this.tableLayoutPanelGUI.PerformLayout();
             this.tableLayoutPanelCONTROL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel_CC_From.ResumeLayout(false);
+            this.tableLayoutPanel_CC_To.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -785,6 +915,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelCONTROL;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelGUI;
+        private System.Windows.Forms.Button btn_CC_Convert;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_CC_From;
+        private System.Windows.Forms.ListBox ListBox_CC_From;
+        private System.Windows.Forms.Label Label_CC_From;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_CC_To;
+        private System.Windows.Forms.ListBox ListBox_CC_To;
+        private System.Windows.Forms.Label Label_CC_To;
     }
 }
 
