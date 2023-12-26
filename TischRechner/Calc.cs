@@ -12,7 +12,7 @@ namespace TischRechner
         public List<double> numbers = new List<double>();
         public List<char> operators = new List<char>();
         public double solution;
-
+        public int indexPos;
         public void AddNumber(string number, string modifier)
         {
             numbers.Add(double.Parse(number) * (modifier == "+" ? 1 : -1));
@@ -21,7 +21,7 @@ namespace TischRechner
         {
             operators.Add(char.Parse(handler));
         }
-        public void Calculate()
+        public void Calculate(int indexPos)
         {
             List<double> tempNumbers = new List<double>(numbers);
             List<char> tempOperators = new List<char>(operators);
@@ -75,6 +75,7 @@ namespace TischRechner
                 }
             }
             solution = tempNumbers[0];
+            this.indexPos = indexPos;
         }
     }
 }

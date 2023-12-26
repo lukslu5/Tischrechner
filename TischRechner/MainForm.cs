@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -16,6 +17,8 @@ namespace TischRechner
         private string savedNumber = "";
         private string savedModifier = null;
 
+        private int indexPos = 0;
+        private bool indexState = true;
 
         List<Calc> Calcs = new List<Calc>();
         public MainForm()
@@ -161,14 +164,26 @@ namespace TischRechner
             UpdateCalc("=");
             EnableButtons(false, false);
 
-            Calcs.Last().Calculate();
+            Calcs.Last().Calculate(indexPos);
             CalcWindow.Text = Calcs.Last().solution.ToString();
             Calcs.Add(new Calc());
 
-            btn_save.Enabled = true;
+            if(!indexState)
+                btn_save.Enabled = true;
             btn_copy.Enabled = true;
+
+            if (indexState)
+            {
+                indexPos++;
+                label_Counter_Number.Text = indexPos.ToString();
+                SavetoCSV();
+            } 
         }
         private void btn_Save_Click(object sender, EventArgs e)
+        {
+            SavetoCSV();
+        }
+        private void SavetoCSV()
         {
             if (!Directory.Exists("Saved"))
                 Directory.CreateDirectory("Saved");
@@ -176,6 +191,11 @@ namespace TischRechner
             string date = DateTime.Now.ToString("yyyy.MM.dd");
             string file = $@"Saved/Calculation_{date}.csv";
             StreamWriter sw = new StreamWriter(file, true);
+
+            if(indexState)
+                sw.Write(Calcs[Calcs.Count - 2].indexPos + ";");
+            else
+                sw.Write(";");
 
             for (int i = 0; i < Calcs[Calcs.Count - 2].numbers.Count; i++)
             {
@@ -214,6 +234,22 @@ namespace TischRechner
         private void CalcWindow_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Counter_Click(object sender, EventArgs e)
+        {
+            if(!indexState)
+            {
+                btn_Counter.BackColor = Color.FromArgb(128, 255, 128);  //Green
+                indexState = true;
+                btn_save.Enabled = false;
+            }
+            else
+            {
+                btn_Counter.BackColor = Color.FromArgb(255, 128, 128);  //Red
+                indexState= false;
+                btn_save.Enabled = true;
+            }
         }
     }
 }

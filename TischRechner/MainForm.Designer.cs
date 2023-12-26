@@ -752,6 +752,7 @@
             this.btn_Counter.Size = new System.Drawing.Size(50, 158);
             this.btn_Counter.TabIndex = 28;
             this.btn_Counter.UseVisualStyleBackColor = false;
+            this.btn_Counter.Click += new System.EventHandler(this.btn_Counter_Click);
             // 
             // pictureBox1
             // 
