@@ -59,15 +59,15 @@
             this.CalcSavedLabel = new System.Windows.Forms.Label();
             this.CalcSaved = new System.Windows.Forms.Label();
             this.tableLayoutPanelCONTROL = new System.Windows.Forms.TableLayoutPanel();
+            this.label_Counter_Number = new System.Windows.Forms.Label();
             this.label_Counter_Index = new System.Windows.Forms.Label();
             this.btn_Counter = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_Counter_ONOFF = new System.Windows.Forms.Label();
-            this.label_Counter_Number = new System.Windows.Forms.Label();
+            this.pictureBox_HK = new System.Windows.Forms.PictureBox();
             this.Panel_UI2.SuspendLayout();
             this.tableLayoutPanelGUI.SuspendLayout();
             this.tableLayoutPanelCONTROL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_HK)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_0
@@ -626,7 +626,7 @@
             this.tableLayoutPanelGUI.Controls.Add(this.CalcSaved, 2, 1);
             this.tableLayoutPanelGUI.Controls.Add(this.tableLayoutPanelCONTROL, 0, 2);
             this.tableLayoutPanelGUI.Controls.Add(this.CalcWindow, 1, 0);
-            this.tableLayoutPanelGUI.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanelGUI.Controls.Add(this.pictureBox_HK, 0, 0);
             this.tableLayoutPanelGUI.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanelGUI.Name = "tableLayoutPanelGUI";
             this.tableLayoutPanelGUI.Padding = new System.Windows.Forms.Padding(2);
@@ -722,6 +722,20 @@
             this.tableLayoutPanelCONTROL.Size = new System.Drawing.Size(324, 324);
             this.tableLayoutPanelCONTROL.TabIndex = 5;
             // 
+            // label_Counter_Number
+            // 
+            this.label_Counter_Number.BackColor = System.Drawing.Color.Transparent;
+            this.label_Counter_Number.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_Counter_Number.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Bold);
+            this.label_Counter_Number.ForeColor = System.Drawing.Color.Snow;
+            this.label_Counter_Number.Location = new System.Drawing.Point(272, 56);
+            this.label_Counter_Number.Margin = new System.Windows.Forms.Padding(2);
+            this.label_Counter_Number.Name = "label_Counter_Number";
+            this.label_Counter_Number.Size = new System.Drawing.Size(50, 50);
+            this.label_Counter_Number.TabIndex = 31;
+            this.label_Counter_Number.Text = "0";
+            this.label_Counter_Number.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // label_Counter_Index
             // 
             this.label_Counter_Index.BackColor = System.Drawing.Color.Transparent;
@@ -754,19 +768,6 @@
             this.btn_Counter.UseVisualStyleBackColor = false;
             this.btn_Counter.Click += new System.EventHandler(this.btn_Counter_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::TischRechner.Properties.Resources.HKUwU;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // label_Counter_ONOFF
             // 
             this.label_Counter_ONOFF.BackColor = System.Drawing.Color.Transparent;
@@ -781,19 +782,19 @@
             this.label_Counter_ONOFF.Text = "ON OFF";
             this.label_Counter_ONOFF.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // label_Counter_Number
+            // pictureBox_HK
             // 
-            this.label_Counter_Number.BackColor = System.Drawing.Color.Transparent;
-            this.label_Counter_Number.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_Counter_Number.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Bold);
-            this.label_Counter_Number.ForeColor = System.Drawing.Color.Snow;
-            this.label_Counter_Number.Location = new System.Drawing.Point(272, 56);
-            this.label_Counter_Number.Margin = new System.Windows.Forms.Padding(2);
-            this.label_Counter_Number.Name = "label_Counter_Number";
-            this.label_Counter_Number.Size = new System.Drawing.Size(50, 50);
-            this.label_Counter_Number.TabIndex = 31;
-            this.label_Counter_Number.Text = "0";
-            this.label_Counter_Number.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pictureBox_HK.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_HK.ErrorImage = null;
+            this.pictureBox_HK.Image = global::TischRechner.Properties.Resources.HKUwU;
+            this.pictureBox_HK.InitialImage = null;
+            this.pictureBox_HK.Location = new System.Drawing.Point(5, 5);
+            this.pictureBox_HK.Name = "pictureBox_HK";
+            this.pictureBox_HK.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox_HK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox_HK.TabIndex = 4;
+            this.pictureBox_HK.TabStop = false;
+            this.pictureBox_HK.Click += new System.EventHandler(this.pictureBox_HK_Click);
             // 
             // MainForm
             // 
@@ -814,7 +815,7 @@
             this.tableLayoutPanelGUI.ResumeLayout(false);
             this.tableLayoutPanelGUI.PerformLayout();
             this.tableLayoutPanelCONTROL.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_HK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -851,7 +852,7 @@
         private System.Windows.Forms.Panel Panel_UI2;
         private System.Windows.Forms.Label CalcSaved;
         private System.Windows.Forms.Label CalcSavedLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox_HK;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelCONTROL;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelGUI;
         private System.Windows.Forms.Button btn_Counter;

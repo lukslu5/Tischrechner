@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -250,6 +251,14 @@ namespace TischRechner
                 indexState= false;
                 btn_save.Enabled = true;
             }
+        }
+
+        private void pictureBox_HK_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo FileExplorer = new ProcessStartInfo();
+            FileExplorer.Arguments = $"{Directory.GetCurrentDirectory()}\\Saved";
+            FileExplorer.FileName = "explorer.exe";
+            Process.Start(FileExplorer);
         }
     }
 }
