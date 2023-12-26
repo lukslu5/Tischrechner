@@ -742,8 +742,6 @@
             this.btn_Counter.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Counter.FlatAppearance.BorderSize = 2;
             this.btn_Counter.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btn_Counter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Counter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Counter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Counter.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Counter.ForeColor = System.Drawing.Color.MediumVioletRed;
