@@ -59,7 +59,11 @@
             this.CalcSavedLabel = new System.Windows.Forms.Label();
             this.CalcSaved = new System.Windows.Forms.Label();
             this.tableLayoutPanelCONTROL = new System.Windows.Forms.TableLayoutPanel();
+            this.label_Counter_Index = new System.Windows.Forms.Label();
+            this.btn_Counter = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_Counter_ONOFF = new System.Windows.Forms.Label();
+            this.label_Counter_Number = new System.Windows.Forms.Label();
             this.Panel_UI2.SuspendLayout();
             this.tableLayoutPanelGUI.SuspendLayout();
             this.tableLayoutPanelCONTROL.SuspendLayout();
@@ -675,6 +679,8 @@
             this.tableLayoutPanelCONTROL.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanelCONTROL.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanelCONTROL.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanelCONTROL.Controls.Add(this.label_Counter_Number, 5, 1);
+            this.tableLayoutPanelCONTROL.Controls.Add(this.label_Counter_Index, 5, 0);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_equals, 4, 4);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_C, 0, 4);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_CE, 0, 2);
@@ -700,6 +706,8 @@
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_9, 3, 2);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_plus, 4, 2);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_minus, 4, 3);
+            this.tableLayoutPanelCONTROL.Controls.Add(this.btn_Counter, 5, 3);
+            this.tableLayoutPanelCONTROL.Controls.Add(this.label_Counter_ONOFF, 5, 2);
             this.tableLayoutPanelCONTROL.Location = new System.Drawing.Point(4, 55);
             this.tableLayoutPanelCONTROL.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelCONTROL.Name = "tableLayoutPanelCONTROL";
@@ -710,8 +718,42 @@
             this.tableLayoutPanelCONTROL.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanelCONTROL.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanelCONTROL.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanelCONTROL.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelCONTROL.Size = new System.Drawing.Size(324, 324);
             this.tableLayoutPanelCONTROL.TabIndex = 5;
+            // 
+            // label_Counter_Index
+            // 
+            this.label_Counter_Index.BackColor = System.Drawing.Color.Transparent;
+            this.label_Counter_Index.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_Counter_Index.Font = new System.Drawing.Font("Lucida Sans Typewriter", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Counter_Index.ForeColor = System.Drawing.Color.Snow;
+            this.label_Counter_Index.Location = new System.Drawing.Point(272, 2);
+            this.label_Counter_Index.Margin = new System.Windows.Forms.Padding(2);
+            this.label_Counter_Index.Name = "label_Counter_Index";
+            this.label_Counter_Index.Size = new System.Drawing.Size(50, 50);
+            this.label_Counter_Index.TabIndex = 30;
+            this.label_Counter_Index.Text = "Index:";
+            this.label_Counter_Index.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // btn_Counter
+            // 
+            this.btn_Counter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_Counter.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_Counter.FlatAppearance.BorderSize = 2;
+            this.btn_Counter.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btn_Counter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(106)))), ((int)(((byte)(136)))));
+            this.btn_Counter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(129)))), ((int)(((byte)(156)))));
+            this.btn_Counter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Counter.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Counter.ForeColor = System.Drawing.Color.MediumVioletRed;
+            this.btn_Counter.Location = new System.Drawing.Point(272, 164);
+            this.btn_Counter.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Counter.Name = "btn_Counter";
+            this.tableLayoutPanelCONTROL.SetRowSpan(this.btn_Counter, 3);
+            this.btn_Counter.Size = new System.Drawing.Size(50, 158);
+            this.btn_Counter.TabIndex = 28;
+            this.btn_Counter.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -725,6 +767,34 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            // 
+            // label_Counter_ONOFF
+            // 
+            this.label_Counter_ONOFF.BackColor = System.Drawing.Color.Transparent;
+            this.label_Counter_ONOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_Counter_ONOFF.Font = new System.Drawing.Font("Lucida Sans Typewriter", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Counter_ONOFF.ForeColor = System.Drawing.Color.Snow;
+            this.label_Counter_ONOFF.Location = new System.Drawing.Point(272, 110);
+            this.label_Counter_ONOFF.Margin = new System.Windows.Forms.Padding(2);
+            this.label_Counter_ONOFF.Name = "label_Counter_ONOFF";
+            this.label_Counter_ONOFF.Size = new System.Drawing.Size(50, 50);
+            this.label_Counter_ONOFF.TabIndex = 29;
+            this.label_Counter_ONOFF.Text = "ON OFF";
+            this.label_Counter_ONOFF.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label_Counter_Number
+            // 
+            this.label_Counter_Number.BackColor = System.Drawing.Color.Transparent;
+            this.label_Counter_Number.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_Counter_Number.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Bold);
+            this.label_Counter_Number.ForeColor = System.Drawing.Color.Snow;
+            this.label_Counter_Number.Location = new System.Drawing.Point(272, 56);
+            this.label_Counter_Number.Margin = new System.Windows.Forms.Padding(2);
+            this.label_Counter_Number.Name = "label_Counter_Number";
+            this.label_Counter_Number.Size = new System.Drawing.Size(50, 50);
+            this.label_Counter_Number.TabIndex = 31;
+            this.label_Counter_Number.Text = "0";
+            this.label_Counter_Number.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // MainForm
             // 
@@ -785,6 +855,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelCONTROL;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelGUI;
+        private System.Windows.Forms.Button btn_Counter;
+        private System.Windows.Forms.Label label_Counter_Index;
+        private System.Windows.Forms.Label label_Counter_ONOFF;
+        private System.Windows.Forms.Label label_Counter_Number;
     }
 }
 
