@@ -249,7 +249,7 @@ namespace TischRechner
 
         }
 
-        private void UpdateRound(double updatedNumber)
+        private void UpdateNumber(double updatedNumber)
         {
             Calcs[Calcs.Count - 2].solution = updatedNumber;
             CalcWindow.Text = updatedNumber.ToString();
@@ -264,8 +264,8 @@ namespace TischRechner
             HttpClient request = new HttpClient();
             HttpResponseMessage response = request.GetAsync($"https://v6.exchangerate-api.com/v6/{apiKey}/pair/{fromCurrency}/{toCurrency}").Result;
             request.Dispose();
-
             string result = response.Content.ReadAsStringAsync().Result;
+            Console.WriteLine(result);
 
             result = result.Replace("\"", string.Empty).Replace("{", string.Empty).Replace("}", string.Empty);
             string[] results = result.Split(',');
@@ -273,7 +273,7 @@ namespace TischRechner
             double converionRate = Convert.ToDouble(results[results.Length - 1].Split(':')[1]) / 10000;
             double number = Calcs[Calcs.Count - 2].solution;
             double numberConversion = number * converionRate;
-            UpdateRound(numberConversion);
+            UpdateNumber(numberConversion);
         }
     }
 }
