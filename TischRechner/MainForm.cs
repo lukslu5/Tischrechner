@@ -219,34 +219,45 @@ namespace TischRechner
 
         }
 
-        private void UpdateRound(double updatedNumber)
+        enum RoundingType
         {
+            NormalRounding,
+            CutOff,
+            CommercialRounding
+        }
+        private void Rounding(RoundingType i)
+        {
+            double number = Calcs[Calcs.Count - 2].solution;
+            double updatedNumber = 0;
+            switch (i)
+            {
+                case RoundingType.NormalRounding:
+                    updatedNumber = Math.Round(number, 2, MidpointRounding.AwayFromZero); //1,045 -> 1,05
+                    break;
+                case RoundingType.CutOff:
+                    updatedNumber = Math.Truncate(100 * number) / 100; //1,045 -> 104,5 -> 104 -> 1,04
+                    break;
+                case RoundingType.CommercialRounding:
+                    updatedNumber = Math.Round(number, 2); // 1,045 -> 1,04
+                    break;
+            }
             Calcs[Calcs.Count - 2].solution = updatedNumber;
             CalcWindow.Text = updatedNumber.ToString();
         }
 
         private void btn_round_Click(object sender, EventArgs e)
         {
-            double number = Calcs[Calcs.Count - 2].solution;
-            double rounded = Math.Round(number , 2, MidpointRounding.AwayFromZero); //1,045 -> 1,5
-
-            UpdateRound(rounded);
+            Rounding(RoundingType.NormalRounding);
         }
 
         private void btn_cutoff_Click(object sender, EventArgs e)
         {
-            double number = Calcs[Calcs.Count - 2].solution;
-            double cutted = Math.Truncate(100 * number) / 100; //1,045 -> 104,5 -> 104 -> 1,04
-
-            UpdateRound(cutted);
+            Rounding(RoundingType.CutOff);
         }
 
         private void btn_roundCommercial_Click(object sender, EventArgs e)
         {
-            double number = Calcs[Calcs.Count - 2].solution;
-            double commerical = Math.Round(number, 2); // 1,045 -> 1,04
-
-            UpdateRound(commerical);
+            Rounding(RoundingType.CommercialRounding);
         }
     }
 }
