@@ -218,7 +218,7 @@ namespace TischRechner
 
         }
 
-        private void UpdateRound(double updatedNumber)
+        private void UpdateNumber(double updatedNumber)
         {
             Calcs[Calcs.Count - 2].solution = updatedNumber;
             CalcWindow.Text = updatedNumber.ToString();
@@ -232,10 +232,10 @@ namespace TischRechner
             switch(btn.Text)
             {
                 case "7%":
-                    UpdateRound(number * 1.07);
+                    UpdateNumber(number * 1.07);
                     break;
                 case "19%":
-                    UpdateRound(number * 1.19);
+                    UpdateNumber(number * 1.19);
                     break;
             }
         }
