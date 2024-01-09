@@ -60,12 +60,12 @@
             this.CalcSaved = new System.Windows.Forms.Label();
             this.tableLayoutPanelCONTROL = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel_CC_To = new System.Windows.Forms.TableLayoutPanel();
-            this.ListBox_CC_To = new System.Windows.Forms.ListBox();
+            this.ComboBox_CC_To = new System.Windows.Forms.ComboBox();
             this.Label_CC_To = new System.Windows.Forms.Label();
             this.btn_CC_Convert = new System.Windows.Forms.Button();
             this.tableLayoutPanel_CC_From = new System.Windows.Forms.TableLayoutPanel();
-            this.ListBox_CC_From = new System.Windows.Forms.ListBox();
             this.Label_CC_From = new System.Windows.Forms.Label();
+            this.ComboBox_CC_From = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel_UI2.SuspendLayout();
             this.tableLayoutPanelGUI.SuspendLayout();
@@ -731,7 +731,7 @@
             // 
             this.tableLayoutPanel_CC_To.ColumnCount = 1;
             this.tableLayoutPanel_CC_To.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel_CC_To.Controls.Add(this.ListBox_CC_To, 0, 1);
+            this.tableLayoutPanel_CC_To.Controls.Add(this.ComboBox_CC_To, 0, 1);
             this.tableLayoutPanel_CC_To.Controls.Add(this.Label_CC_To, 0, 0);
             this.tableLayoutPanel_CC_To.Location = new System.Drawing.Point(270, 216);
             this.tableLayoutPanel_CC_To.Margin = new System.Windows.Forms.Padding(0);
@@ -743,17 +743,17 @@
             this.tableLayoutPanel_CC_To.Size = new System.Drawing.Size(54, 108);
             this.tableLayoutPanel_CC_To.TabIndex = 34;
             // 
-            // ListBox_CC_To
+            // ComboBox_CC_To
             // 
-            this.ListBox_CC_To.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ListBox_CC_To.FormattingEnabled = true;
-            this.ListBox_CC_To.IntegralHeight = false;
-            this.ListBox_CC_To.Location = new System.Drawing.Point(2, 23);
-            this.ListBox_CC_To.Margin = new System.Windows.Forms.Padding(2);
-            this.ListBox_CC_To.Name = "ListBox_CC_To";
-            this.ListBox_CC_To.ScrollAlwaysVisible = true;
-            this.ListBox_CC_To.Size = new System.Drawing.Size(50, 83);
-            this.ListBox_CC_To.TabIndex = 32;
+            this.ComboBox_CC_To.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.ComboBox_CC_To.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold);
+            this.ComboBox_CC_To.ForeColor = System.Drawing.Color.MediumVioletRed;
+            this.ComboBox_CC_To.FormattingEnabled = true;
+            this.ComboBox_CC_To.Location = new System.Drawing.Point(2, 23);
+            this.ComboBox_CC_To.Margin = new System.Windows.Forms.Padding(2, 2, 2, 0);
+            this.ComboBox_CC_To.Name = "ComboBox_CC_To";
+            this.ComboBox_CC_To.Size = new System.Drawing.Size(50, 85);
+            this.ComboBox_CC_To.TabIndex = 35;
             // 
             // Label_CC_To
             // 
@@ -794,8 +794,8 @@
             // 
             this.tableLayoutPanel_CC_From.ColumnCount = 1;
             this.tableLayoutPanel_CC_From.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel_CC_From.Controls.Add(this.ListBox_CC_From, 0, 1);
             this.tableLayoutPanel_CC_From.Controls.Add(this.Label_CC_From, 0, 0);
+            this.tableLayoutPanel_CC_From.Controls.Add(this.ComboBox_CC_From, 0, 1);
             this.tableLayoutPanel_CC_From.Location = new System.Drawing.Point(270, 0);
             this.tableLayoutPanel_CC_From.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel_CC_From.Name = "tableLayoutPanel_CC_From";
@@ -803,20 +803,9 @@
             this.tableLayoutPanelCONTROL.SetRowSpan(this.tableLayoutPanel_CC_From, 2);
             this.tableLayoutPanel_CC_From.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.70803F));
             this.tableLayoutPanel_CC_From.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.29197F));
+            this.tableLayoutPanel_CC_From.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel_CC_From.Size = new System.Drawing.Size(54, 108);
             this.tableLayoutPanel_CC_From.TabIndex = 31;
-            // 
-            // ListBox_CC_From
-            // 
-            this.ListBox_CC_From.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ListBox_CC_From.FormattingEnabled = true;
-            this.ListBox_CC_From.IntegralHeight = false;
-            this.ListBox_CC_From.Location = new System.Drawing.Point(2, 23);
-            this.ListBox_CC_From.Margin = new System.Windows.Forms.Padding(2);
-            this.ListBox_CC_From.Name = "ListBox_CC_From";
-            this.ListBox_CC_From.ScrollAlwaysVisible = true;
-            this.ListBox_CC_From.Size = new System.Drawing.Size(50, 83);
-            this.ListBox_CC_From.TabIndex = 32;
             // 
             // Label_CC_From
             // 
@@ -830,6 +819,18 @@
             this.Label_CC_From.Size = new System.Drawing.Size(50, 19);
             this.Label_CC_From.TabIndex = 33;
             this.Label_CC_From.Text = "From:";
+            // 
+            // ComboBox_CC_From
+            // 
+            this.ComboBox_CC_From.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.ComboBox_CC_From.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBox_CC_From.ForeColor = System.Drawing.Color.MediumVioletRed;
+            this.ComboBox_CC_From.FormattingEnabled = true;
+            this.ComboBox_CC_From.Location = new System.Drawing.Point(2, 23);
+            this.ComboBox_CC_From.Margin = new System.Windows.Forms.Padding(2, 2, 2, 0);
+            this.ComboBox_CC_From.Name = "ComboBox_CC_From";
+            this.ComboBox_CC_From.Size = new System.Drawing.Size(50, 85);
+            this.ComboBox_CC_From.TabIndex = 34;
             // 
             // pictureBox1
             // 
@@ -907,10 +908,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelGUI;
         private System.Windows.Forms.Button btn_CC_Convert;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_CC_From;
-        private System.Windows.Forms.ListBox ListBox_CC_From;
         private System.Windows.Forms.Label Label_CC_From;
+        private System.Windows.Forms.ComboBox ComboBox_CC_From;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_CC_To;
-        private System.Windows.Forms.ListBox ListBox_CC_To;
+        private System.Windows.Forms.ComboBox ComboBox_CC_To;
         private System.Windows.Forms.Label Label_CC_To;
     }
 }

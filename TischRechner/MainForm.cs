@@ -48,12 +48,9 @@ namespace TischRechner
 
             foreach (string code in currencyCodes)
             {
-                ListBox_CC_From.Items.Add(code);
-                ListBox_CC_To.Items.Add(code);
+                ComboBox_CC_From.Items.Add(code);
+                ComboBox_CC_To.Items.Add(code);
             }
-
-            ListBox_CC_From.SelectedItem = "EUR";
-            ListBox_CC_To.SelectedItem = "GBP";
         }
         private void UpdateCalc(string op)
         {
@@ -257,9 +254,12 @@ namespace TischRechner
 
         private void btn_CC_Convert_Click(object sender, EventArgs e)
         {
+            if (ComboBox_CC_From.SelectedItem == null || ComboBox_CC_To.SelectedItem == null)
+                return;
+
             string apiKey = "80f9b45c29ba5394ea3e6603";
-            string fromCurrency = ListBox_CC_From.SelectedItem.ToString();
-            string toCurrency = ListBox_CC_To.SelectedItem.ToString();
+            string fromCurrency = ComboBox_CC_From.SelectedItem.ToString();
+            string toCurrency = ComboBox_CC_To.SelectedItem.ToString();
 
             HttpClient request = new HttpClient();
             HttpResponseMessage response = request.GetAsync($"https://v6.exchangerate-api.com/v6/{apiKey}/pair/{fromCurrency}/{toCurrency}").Result;
