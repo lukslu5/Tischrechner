@@ -168,7 +168,7 @@ namespace TischRechner
             btn_save.Enabled = true;
             btn_copy.Enabled = true;
             btn_round.Enabled = true;
-            btn_cutoff.Enabled = true;
+            btn_cutOff.Enabled = true;
             btn_roundCommercial.Enabled = true;
         }
         private void btn_Save_Click(object sender, EventArgs e)

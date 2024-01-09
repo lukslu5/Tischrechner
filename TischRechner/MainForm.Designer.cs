@@ -60,7 +60,7 @@
             this.CalcSaved = new System.Windows.Forms.Label();
             this.tableLayoutPanelCONTROL = new System.Windows.Forms.TableLayoutPanel();
             this.btn_round = new System.Windows.Forms.Button();
-            this.btn_cutoff = new System.Windows.Forms.Button();
+            this.btn_cutOff = new System.Windows.Forms.Button();
             this.btn_roundCommercial = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel_UI2.SuspendLayout();
@@ -704,8 +704,8 @@
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_plus, 4, 2);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_minus, 4, 3);
             this.tableLayoutPanelCONTROL.Controls.Add(this.btn_round, 5, 0);
-            this.tableLayoutPanelCONTROL.Controls.Add(this.btn_cutoff, 5, 2);
-            this.tableLayoutPanelCONTROL.Controls.Add(this.btn_roundCommercial, 5, 4);
+            this.tableLayoutPanelCONTROL.Controls.Add(this.btn_roundCommercial, 5, 2);
+            this.tableLayoutPanelCONTROL.Controls.Add(this.btn_cutOff, 5, 4);
             this.tableLayoutPanelCONTROL.Location = new System.Drawing.Point(4, 55);
             this.tableLayoutPanelCONTROL.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelCONTROL.Name = "tableLayoutPanelCONTROL";
@@ -738,31 +738,31 @@
             this.tableLayoutPanelCONTROL.SetRowSpan(this.btn_round, 2);
             this.btn_round.Size = new System.Drawing.Size(50, 104);
             this.btn_round.TabIndex = 28;
-            this.btn_round.Text = "↕";
+            this.btn_round.Text = "N.R\r\n≈";
             this.btn_round.UseVisualStyleBackColor = true;
             this.btn_round.Click += new System.EventHandler(this.btn_round_Click);
             // 
-            // btn_cutoff
+            // btn_cutOff
             // 
-            this.btn_cutoff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(207)))), ((int)(((byte)(219)))));
-            this.btn_cutoff.Enabled = false;
-            this.btn_cutoff.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_cutoff.FlatAppearance.BorderSize = 2;
-            this.btn_cutoff.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btn_cutoff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(106)))), ((int)(((byte)(136)))));
-            this.btn_cutoff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(129)))), ((int)(((byte)(156)))));
-            this.btn_cutoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cutoff.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cutoff.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.btn_cutoff.Location = new System.Drawing.Point(272, 110);
-            this.btn_cutoff.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_cutoff.Name = "btn_cutoff";
-            this.tableLayoutPanelCONTROL.SetRowSpan(this.btn_cutoff, 2);
-            this.btn_cutoff.Size = new System.Drawing.Size(50, 104);
-            this.btn_cutoff.TabIndex = 31;
-            this.btn_cutoff.Text = "✂";
-            this.btn_cutoff.UseVisualStyleBackColor = true;
-            this.btn_cutoff.Click += new System.EventHandler(this.btn_cutoff_Click);
+            this.btn_cutOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(207)))), ((int)(((byte)(219)))));
+            this.btn_cutOff.Enabled = false;
+            this.btn_cutOff.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_cutOff.FlatAppearance.BorderSize = 2;
+            this.btn_cutOff.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btn_cutOff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(106)))), ((int)(((byte)(136)))));
+            this.btn_cutOff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(129)))), ((int)(((byte)(156)))));
+            this.btn_cutOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cutOff.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cutOff.ForeColor = System.Drawing.Color.MediumVioletRed;
+            this.btn_cutOff.Location = new System.Drawing.Point(272, 218);
+            this.btn_cutOff.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_cutOff.Name = "btn_cutOff";
+            this.tableLayoutPanelCONTROL.SetRowSpan(this.btn_cutOff, 2);
+            this.btn_cutOff.Size = new System.Drawing.Size(50, 104);
+            this.btn_cutOff.TabIndex = 31;
+            this.btn_cutOff.Text = "C.O\r\n✄";
+            this.btn_cutOff.UseVisualStyleBackColor = true;
+            this.btn_cutOff.Click += new System.EventHandler(this.btn_cutoff_Click);
             // 
             // btn_roundCommercial
             // 
@@ -776,13 +776,13 @@
             this.btn_roundCommercial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_roundCommercial.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_roundCommercial.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.btn_roundCommercial.Location = new System.Drawing.Point(272, 218);
+            this.btn_roundCommercial.Location = new System.Drawing.Point(272, 110);
             this.btn_roundCommercial.Margin = new System.Windows.Forms.Padding(2);
             this.btn_roundCommercial.Name = "btn_roundCommercial";
             this.tableLayoutPanelCONTROL.SetRowSpan(this.btn_roundCommercial, 2);
             this.btn_roundCommercial.Size = new System.Drawing.Size(50, 104);
             this.btn_roundCommercial.TabIndex = 29;
-            this.btn_roundCommercial.Text = "≈";
+            this.btn_roundCommercial.Text = "C.R\r\n≈";
             this.btn_roundCommercial.UseVisualStyleBackColor = true;
             this.btn_roundCommercial.Click += new System.EventHandler(this.btn_roundCommercial_Click);
             // 
@@ -858,7 +858,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelCONTROL;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelGUI;
-        private System.Windows.Forms.Button btn_cutoff;
+        private System.Windows.Forms.Button btn_cutOff;
         private System.Windows.Forms.Button btn_roundCommercial;
         private System.Windows.Forms.Button btn_round;
     }
